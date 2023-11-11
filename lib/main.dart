@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "YouApp",
-      debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner: false, 
       home: InitPage(),
     );
   }
