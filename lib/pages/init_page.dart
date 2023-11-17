@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_youapp/pages/home_pages.dart';
 import 'package:flutter_youapp/ui/general/colors.dart';
 
 class InitPage extends StatefulWidget {
@@ -11,9 +12,7 @@ class InitPage extends StatefulWidget {
 class _InitPageState extends State<InitPage> {
   int _currentIndex = 0;
   List<Widget> _pages = [
-    Center(
-      child: Text("Principal"),
-    ),
+    HomePage(),
     Center(
       child: Text("Short"),
     ),
@@ -41,7 +40,7 @@ class _InitPageState extends State<InitPage> {
         actions: [
           IconButton(
             onPressed: () {},
-            icon: Icon(
+            icon: const Icon(
               Icons.cast,
               color: Colors.white,
             ),
@@ -51,7 +50,7 @@ class _InitPageState extends State<InitPage> {
               icon: Stack(
                 clipBehavior: Clip.none,
                 children: [
-                  Icon(
+                  const Icon(
                     Icons.notifications_none,
                     color: Colors.white,
                   ),
@@ -59,8 +58,8 @@ class _InitPageState extends State<InitPage> {
                     top: -2,
                     right: -4,
                     child: Container(
-                      padding: EdgeInsets.all(2.4),
-                      decoration: BoxDecoration(
+                      padding: const EdgeInsets.all(2.4),
+                      decoration:const BoxDecoration(
                         shape: BoxShape.circle,
                         color: Colors.red,
                         
@@ -69,7 +68,8 @@ class _InitPageState extends State<InitPage> {
                     ),
                   )
                 ],
-              )),
+              )
+              ),
           IconButton(
             onPressed: () {},
             icon: Icon(
@@ -80,7 +80,7 @@ class _InitPageState extends State<InitPage> {
           const SizedBox(
             width: 6.0,
           ),
-          CircleAvatar(
+          const CircleAvatar(
             backgroundColor: Colors.white12,
             radius: 14.0,
             backgroundImage: NetworkImage(
@@ -105,12 +105,12 @@ class _InitPageState extends State<InitPage> {
           setState(() {});
         },
         items: [
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
               label: "Principal",
               icon: Icon(
                 Icons.home_filled,
               )),
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
               label: "Shorts",
               icon: Icon(
                 Icons.play_circle_filled,
@@ -124,12 +124,12 @@ class _InitPageState extends State<InitPage> {
                   size: 30.0,
                 ),
               )),
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
               label: "Suscripciones",
               icon: Icon(
                 Icons.subscriptions_rounded,
               )),
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
               label: "Biblioteca",
               icon: Icon(
                 Icons.video_collection_rounded,
