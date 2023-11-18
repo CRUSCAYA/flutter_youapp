@@ -1,12 +1,30 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_youapp/models/video_model.dart';
 import 'package:flutter_youapp/services/api_services.dart';
 import 'package:flutter_youapp/ui/general/colors.dart';
 import 'package:flutter_youapp/ui/widgets/item_filter_widgets.dart';
 import 'package:flutter_youapp/ui/widgets/item_videos_widgets.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
   //const HomePage({Key? key}) : super(key: key);
-  APIService _apiService = APIService();
+  final APIService _apiService = APIService();
+  List<VideoModel> videos = [];
+  initState() {
+    super.initState();
+    getData();
+  }
+
+  getData() {
+    _apiService.getVideos().then((value) {
+      videos = value;
+      setState(() {});
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -66,15 +84,19 @@ class HomePage extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10.0,
             ),
-            ItemVideoWidgets(),
-            ItemVideoWidgets(),
-            ItemVideoWidgets(),
-            ItemVideoWidgets(),
-            ItemVideoWidgets(),
-            ItemVideoWidgets(),
+            ListView.builder(
+              shrinkWrap: true,
+              physics: ScrollPhysics(),
+              itemCount: videos.length,
+              itemBuilder: (BuildContext context, int index){
+                return ItemVideoWidgets(
+                  videoModel: videos[index],
+                );
+              }
+            )
           ],
         ),
       ),

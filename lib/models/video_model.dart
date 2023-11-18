@@ -1,3 +1,4 @@
+
 class VideoModel {
     String kind;
     String etag;
@@ -25,9 +26,11 @@ class VideoModel {
         "snippet": snippet.toJson(),
     };
 }
+
 class Id {
     String kind;
     String videoId;
+
     Id({
         required this.kind,
         required this.videoId,
@@ -35,7 +38,7 @@ class Id {
 
     factory Id.fromJson(Map<String, dynamic> json) => Id(
         kind: json["kind"],
-        videoId: json["videoId"],
+        videoId: json["videoId"].toString(),
     );
 
     Map<String, dynamic> toJson() => {
@@ -43,6 +46,7 @@ class Id {
         "videoId": videoId,
     };
 }
+
 class Snippet {
     DateTime publishedAt;
     String channelId;
@@ -86,6 +90,7 @@ class Snippet {
         "publishTime": publishTime.toIso8601String(),
     };
 }
+
 class Thumbnails {
     Default thumbnailsDefault;
     Default medium;
@@ -109,21 +114,22 @@ class Thumbnails {
         "high": high.toJson(),
     };
 }
+
 class Default {
     String url;
     int width;
     int height;
 
     Default({
-       required this.url,
-       required this.width,
-       required this.height,
+        required this.url,
+        required this.width,
+        required this.height,
     });
 
     factory Default.fromJson(Map<String, dynamic> json) => Default(
         url: json["url"],
-        width: json["width"],
-        height: json["height"],
+        width: json["width"]?? 0,
+        height: json["height"]?? 0,
     );
 
     Map<String, dynamic> toJson() => {
