@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_youapp/pages/channel_page.dart';
 import 'package:flutter_youapp/ui/general/colors.dart';
 import 'package:flutter_youapp/ui/widgets/item_video_detail_widget.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
@@ -123,6 +124,14 @@ class _VideoDetailPageState extends State<VideoDetailPage> {
                   color: Colors.white24,
                 ),
                 ListTile(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ChannelPage(),
+                      ),
+                    );
+                  },
                   leading: CircleAvatar(
                     backgroundColor: Colors.white24,
                     backgroundImage: NetworkImage(
