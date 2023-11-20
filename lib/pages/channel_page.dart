@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_youapp/pages/channel_principal.dart';
+import 'package:flutter_youapp/pages/videos_page.dart';
 import 'package:flutter_youapp/ui/general/colors.dart';
 
 class ChannelPage extends StatefulWidget {
@@ -107,10 +108,7 @@ class _ChannelPageState extends State<ChannelPage>
           controller: _tabController,
           children: [
             MyHomePage(),
-            
-            Center(
-              child: Text("Pagina 2"),
-            ),
+            VideosPage(),
             Center(
               child: Text("Pagina 3"),
             ),

@@ -13,7 +13,7 @@ class _InitPageState extends State<InitPage> {
   int _currentIndex = 0;
   List<Widget> _pages = [
     HomePage(),
-    Center(
+     Center(
       child: Text("Short"),
     ),
     Center(

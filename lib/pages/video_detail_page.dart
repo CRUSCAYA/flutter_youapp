@@ -62,7 +62,7 @@ class _VideoDetailPageState extends State<VideoDetailPage> {
           ),
           ListTile(
             title: Text(
-              "msmmsmsssssssssssssssss",
+              "viajes por el mundo",
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
               style: TextStyle(
@@ -151,7 +151,7 @@ class _VideoDetailPageState extends State<VideoDetailPage> {
                     ),
                   ),
                   title: Text(
-                    "ffffffff",
+                    "cruscaya",
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 14.0,

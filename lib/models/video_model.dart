@@ -58,6 +58,7 @@ class Snippet {
     DateTime publishTime;
 
     Snippet({
+      
         required this.publishedAt,
         required this.channelId,
         required this.title,
