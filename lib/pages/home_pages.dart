@@ -18,7 +18,6 @@ class _HomePageState extends State<HomePage> {
     super.initState();
     getData();
   }
-
   getData() {
     _apiService.getVideos().then((value) {
       videos = value;
@@ -55,7 +54,9 @@ class _HomePageState extends State<HomePage> {
                       Icons.explore_outlined,
                     ),
                     label: const Text(
+
                       "Explorar",
+                      style: TextStyle(color: Colors.white,),
                     ),
                   ),
                   const SizedBox(

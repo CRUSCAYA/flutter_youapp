@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:flutter_youapp/models/channel_model.dart';
 import 'package:flutter_youapp/models/video_model.dart';
 import 'package:flutter_youapp/utils/constants.dart';
 import 'package:http/http.dart' as http;
@@ -18,4 +19,5 @@ class APIService {
     }
     return videosModel;
   }
+ 
 }

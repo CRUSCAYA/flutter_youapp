@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_youapp/pages/channel_principal.dart';
 import 'package:flutter_youapp/ui/general/colors.dart';
 
 class ChannelPage extends StatefulWidget {
@@ -49,6 +50,7 @@ class _ChannelPageState extends State<ChannelPage>
             isScrollable: true,
             indicatorColor: Colors.white,
             indicatorWeight: 2.7,
+       
             tabs: [
               Tab(
                 child: Text(
@@ -104,9 +106,8 @@ class _ChannelPageState extends State<ChannelPage>
         body: TabBarView(
           controller: _tabController,
           children: [
-            Center(
-              child: Text("Pagina 1"),
-            ),
+            MyHomePage(),
+            
             Center(
               child: Text("Pagina 2"),
             ),

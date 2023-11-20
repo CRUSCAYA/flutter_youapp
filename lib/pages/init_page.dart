@@ -83,8 +83,7 @@ class _InitPageState extends State<InitPage> {
           const CircleAvatar(
             backgroundColor: Colors.white12,
             radius: 14.0,
-            backgroundImage: NetworkImage(
-                "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"),
+            backgroundImage: AssetImage("assets/images/perfil.png"),
           ),
           const SizedBox(
             width: 12.0,
